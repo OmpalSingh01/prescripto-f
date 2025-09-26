@@ -82,142 +82,137 @@
 
 // export default Login
 
+
+
 import React, { useContext, useEffect, useState } from 'react';
 import { AppContext } from '../context/AppContext';
 import axios from 'axios';
 import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
+import { AiFillEye, AiFillEyeInvisible } from 'react-icons/ai';
 
 const Login = () => {
   const [mode, setMode] = useState('Sign Up'); // 'Sign Up' or 'Login'
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    password: '',
-  });
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
 
   const navigate = useNavigate();
   const { backendUrl, token, setToken } = useContext(AppContext);
 
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  const onSubmitHandler = async (event) => {
+    event.preventDefault();
     setLoading(true);
-    try {
-      const endpoint =
-        mode === 'Sign Up' ? '/api/user/register' : '/api/user/login';
-      const payload =
-        mode === 'Sign Up'
-          ? { name: formData.name, email: formData.email, password: formData.password }
-          : { email: formData.email, password: formData.password };
 
-      const { data } = await axios.post(backendUrl + endpoint, payload);
+    try {
+      let data;
+      if (mode === 'Sign Up') {
+        ({ data } = await axios.post(`${backendUrl}/api/user/register`, { name, email, password }));
+      } else {
+        ({ data } = await axios.post(`${backendUrl}/api/user/login`, { email, password }));
+      }
 
       if (data.success) {
         localStorage.setItem('token', data.token);
         setToken(data.token);
         toast.success(`${mode} successful!`);
-        navigate('/');
       } else {
         toast.error(data.message);
       }
     } catch (error) {
-      console.error(error);
-      toast.error('Something went wrong. Please try again.');
+      toast.error(error.response?.data?.message || 'Something went wrong');
     } finally {
       setLoading(false);
     }
   };
 
   useEffect(() => {
-    if (token) navigate('/');
-  }, [token, navigate]);
+    if (token) {
+      navigate('/');
+    }
+  }, [token]);
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4 sm:px-6 lg:px-8">
-      <form
-        onSubmit={handleSubmit}
-        className="bg-white shadow-lg rounded-lg p-6 sm:p-10 max-w-md w-full"
-      >
-        <h2 className="text-3xl font-bold text-gray-800 mb-2">
-          {mode === 'Sign Up' ? 'Create Account' : 'Login'}
-        </h2>
-        <p className="text-gray-600 mb-6">
-          Please {mode === 'Sign Up' ? 'sign up' : 'log in'} to book an appointment
-        </p>
+    <form onSubmit={onSubmitHandler} className="min-h-[80vh] flex items-center">
+      <div className="flex flex-col gap-4 m-auto items-start p-8 min-w-[340px] sm:min-w-96 border rounded-xl text-[#4B5563] text-sm shadow-lg bg-white">
+        <p className="text-3xl font-bold">{mode === 'Sign Up' ? 'Create Account' : 'Login'}</p>
+        <p className="text-gray-500">{mode === 'Sign Up' ? 'Sign up to book appointments' : 'Login to access your account'}</p>
 
         {mode === 'Sign Up' && (
-          <div className="mb-4">
-            <label className="block text-gray-700 mb-1" htmlFor="name">
-              Full Name
-            </label>
+          <div className="w-full">
+            <p className="font-medium">Full Name</p>
             <input
               type="text"
-              name="name"
-              id="name"
-              value={formData.name}
-              onChange={handleChange}
-              className="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              placeholder="John Doe"
+              className="border border-gray-300 rounded w-full p-2 mt-1 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
               required
             />
           </div>
         )}
 
-        <div className="mb-4">
-          <label className="block text-gray-700 mb-1" htmlFor="email">
-            Email
-          </label>
+        <div className="w-full">
+          <p className="font-medium">Email</p>
           <input
             type="email"
-            name="email"
-            id="email"
-            value={formData.email}
-            onChange={handleChange}
-            className="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder="example@mail.com"
+            className="border border-gray-300 rounded w-full p-2 mt-1 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
             required
           />
         </div>
 
-        <div className="mb-4">
-          <label className="block text-gray-700 mb-1" htmlFor="password">
-            Password
-          </label>
+        <div className="w-full relative">
+          <p className="font-medium">Password</p>
           <input
-            type="password"
-            name="password"
-            id="password"
-            value={formData.password}
-            onChange={handleChange}
-            className="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary"
+            type={showPassword ? 'text' : 'password'}
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            placeholder="Enter your password"
+            className="border border-gray-300 rounded w-full p-2 mt-1 pr-10 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
             required
           />
+          {/* <span
+            onClick={() => setShowPassword(!showPassword)}
+            className="absolute right-2 top-[38px] cursor-pointer text-gray-500"
+          >
+            {showPassword ? <AiFillEyeInvisible size={20} /> : <AiFillEye size={20} />}
+          </span> */}
         </div>
 
         <button
           type="submit"
           disabled={loading}
-          className="w-full bg-primary text-white py-2 rounded-md text-lg font-medium hover:bg-primary-dark transition"
+          className={`bg-primary text-white w-full py-2 mt-2 rounded-md text-base hover:bg-primary-dark transition-colors ${
+            loading ? 'opacity-70 cursor-not-allowed' : ''
+          }`}
         >
-          {loading ? 'Processing...' : mode === 'Sign Up' ? 'Create Account' : 'Login'}
+          {loading ? 'Please wait...' : mode === 'Sign Up' ? 'Create Account' : 'Login'}
         </button>
 
-        <p className="mt-4 text-center text-gray-600">
-          {mode === 'Sign Up'
-            ? 'Already have an account?'
-            : 'Create a new account?'}{' '}
-          <span
-            onClick={() => setMode(mode === 'Sign Up' ? 'Login' : 'Sign Up')}
-            className="text-primary font-medium cursor-pointer hover:underline"
-          >
-            {mode === 'Sign Up' ? 'Login here' : 'Click here'}
-          </span>
+        <p className="text-gray-500 text-sm mt-2">
+          {mode === 'Sign Up' ? (
+            <>
+              Already have an account?{' '}
+              <span onClick={() => setMode('Login')} className="text-primary underline cursor-pointer">
+                Login here
+              </span>
+            </>
+          ) : (
+            <>
+              Don't have an account?{' '}
+              <span onClick={() => setMode('Sign Up')} className="text-primary underline cursor-pointer">
+                Sign up
+              </span>
+            </>
+          )}
         </p>
-      </form>
-    </div>
+      </div>
+    </form>
   );
 };
 
