@@ -41,6 +41,19 @@ It allows patients to <b>book appointments</b>, doctors to <b>manage schedules</
 
 ---
 
+📌 Project Objective
+
+Prescripto is a full-stack Doctor Appointment Booking System built using the MERN stack, designed to streamline healthcare appointment management. Its core objectives include:
+
+Seamless Patient Experience: Provide patients with an intuitive platform to easily book and manage doctor appointments.
+
+Efficient Doctor Management: Allow doctors to efficiently organize their schedules, approve or reject appointments, and track patient history.
+
+Comprehensive Admin Oversight: Enable administrators to monitor and manage users, doctors, appointments, and overall system activity.
+
+Responsive & User-Friendly Interface: Deliver a consistent and accessible experience across desktops, tablets, and mobile devices.
+
+Secure Payment Integration: Ensure safe and smooth processing of appointment fees through a reliable payment gateway.
 
 
 ---
@@ -54,6 +67,24 @@ It allows patients to <b>book appointments</b>, doctors to <b>manage schedules</
 - 🔍 **Search & Filter** – Find doctors by specialty or availability  
 - 📱 **Responsive UI** – Works on desktop, tablet, and mobile devices  
 - ⚙️ **Admin Panel** – Overview of users, doctors, and appointments  
+
+---
+
+## 🛠️ Tech Stack
+
+| Technology                 | Description                                                                | Badge                                                                                                               |
+| -------------------------- | -------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| **React**                  | Component-based frontend library for dynamic UI                            | <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=white" />              |
+| **Tailwind CSS & DaisyUI** | Utility-first CSS framework & prebuilt UI components for responsive design | <img src="https://img.shields.io/badge/TailwindCSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" /> |
+| **Node.js**                | Scalable server-side runtime                                               | <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white" />          |
+| **Express.js**             | Web framework for backend API management                                   | <img src="https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express" />                       |
+| **MongoDB (Atlas)**        | Cloud-hosted NoSQL database for flexible data storage                      | <img src="https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white" />          |
+| **JWT**                    | JSON Web Tokens for secure user authentication                             | <img src="https://img.shields.io/badge/JWT-black?style=for-the-badge&logo=jsonwebtokens" />                         |
+| **bcrypt.js**              | Password hashing for enhanced security                                     | <img src="https://img.shields.io/badge/bcrypt.js-005A9C?style=for-the-badge&logo=bcrypt&logoColor=white" />         |
+| **Razorpay**               | Secure payment gateway integration                                         | <img src="https://img.shields.io/badge/Razorpay-02042B?style=for-the-badge&logo=razorpay&logoColor=white" />        |
+| **Postman**                | API testing and validation                                                 | <img src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white" />          |
+| **Vercel**                 | Frontend deployment with CDN                                               | <img src="https://img.shields.io/badge/Vercel-black?style=for-the-badge&logo=vercel&logoColor=white" />             |
+| **Render**                 | Backend deployment with reliable uptime                                    | <img src="https://img.shields.io/badge/Render-purple?style=for-the-badge&logo=render&logoColor=white" />            |
 
 ---
 
@@ -129,6 +160,24 @@ cd client
 npm run dev
 ```
 
+---
+
+## 🔮 Future Enhancements
+
+🏥 Add multi-location doctor management for larger hospitals.
+
+📆 Implement appointment reminders via email/SMS.
+
+📊 Add analytics dashboards for admins and doctors.
+
+🌐 Implement multi-language support.
+
+🛡️ Enhance security features, e.g., 2FA for patients and doctors.
+
+💡 Mobile app integration for better accessibility.
+
+---
+
 ## 🤝 Contributing
 
 Contributions are welcome!
@@ -145,7 +194,21 @@ Push to the branch (git push origin feature/your-feature)
 Open a Pull Request
 ```
 
+---
+
 ## 📄 License
 
 This project is licensed under the MIT License – feel free to use and modify.
+
+
+## 👨‍💻 Maintainer
+
+<p align="center">
+  <img src="https://res.cloudinary.com/dusmnbymp/image/upload/v1758912378/logo_af0asi.svg" width="80" alt="Prescripto Logo" />
+</p>
+
+**Mohit Singh**  
+- Email: [mohitsingh.2626452@gmail.com](mailto:mohitsingh.2626452@gmail.com)  
+- GitHub: [OmpalSingh01](https://github.com/OmpalSingh01)  
+- Live Demo: [https://prescripto.vercel.app/](https://prescripto.vercel.app/)
 
