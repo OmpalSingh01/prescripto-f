@@ -5,7 +5,7 @@
 
 <p align="center">
   <h1>💊 Prescripto - Doctor Appointment Booking System</h1>
-  <a href="">https://prescripto-f.vercel.app/
+  <a href="https://prescripto-f.vercel.app/">
     <img src="https://img.shields.io/badge/Live%20Demo-Visit%20Now-brightgreen?style=for-the-badge&logo=vercel" />
   </a>
 </p>
