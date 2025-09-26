@@ -201,7 +201,7 @@ This project is licensed under the MIT License – feel free to use and modify.
 
 ## 👨‍💻 Maintainer
 
-<p align="center">
+<p align="left">
   <img src="https://res.cloudinary.com/dusmnbymp/image/upload/v1758912378/logo_af0asi.svg" width="80" alt="Prescripto Logo" />
 </p>
 
