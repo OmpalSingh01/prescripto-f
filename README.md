@@ -41,19 +41,16 @@ It allows patients to <b>book appointments</b>, doctors to <b>manage schedules</
 
 ---
 
-📌 Project Objective
+## 📌 Project Objective
 
-Prescripto is a full-stack Doctor Appointment Booking System built using the MERN stack, designed to streamline healthcare appointment management. Its core objectives include:
+**Prescripto** is a **full-stack Doctor Appointment Booking System** built with the **MERN stack**, designed to simplify and modernize healthcare appointment management. The system delivers an efficient, secure, and user-friendly experience for patients, doctors, and administrators. Its core objectives include:
 
-Seamless Patient Experience: Provide patients with an intuitive platform to easily book and manage doctor appointments.
+- **Seamless Patient Experience:** Provide patients with an intuitive platform to quickly browse doctors, book appointments, and manage their medical schedules effortlessly.
+- **Efficient Doctor Management:** Allow doctors to organize their schedules, manage appointments, approve or reject bookings, and maintain patient records efficiently.
+- **Comprehensive Admin Oversight:** Equip administrators with tools to monitor users, manage doctors and appointments, and oversee overall system activity in real-time.
+- **Responsive & Accessible Interface:** Ensure a consistent, mobile-friendly, and accessible experience across desktops, tablets, and smartphones.
+- **Secure Payment Integration:** Facilitate safe, smooth, and reliable payment processing for appointment fees through a trusted gateway.
 
-Efficient Doctor Management: Allow doctors to efficiently organize their schedules, approve or reject appointments, and track patient history.
-
-Comprehensive Admin Oversight: Enable administrators to monitor and manage users, doctors, appointments, and overall system activity.
-
-Responsive & User-Friendly Interface: Deliver a consistent and accessible experience across desktops, tablets, and mobile devices.
-
-Secure Payment Integration: Ensure safe and smooth processing of appointment fees through a reliable payment gateway.
 
 
 ---
@@ -94,7 +91,9 @@ Secure Payment Integration: Ensure safe and smooth processing of appointment fee
   <table>
     <tr>
       <td align="center">
-        <img width="100%" alt="Home Page" src="https://user-images.githubusercontent.com/your-images/home.png" />
+        <img width="100%" alt="Home Page" src="<img width="1920" height="1150" alt="Screenshot 2025-09-27 003859" src="https://github.com/user-attachments/assets/444bda20-137a-4175-8db0-8b24e4ba8a6b" />
+" />
+
         <br /><b>🏠 Home Page</b>
       </td>
       <td align="center">
