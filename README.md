@@ -205,7 +205,7 @@ This project is licensed under the MIT License – feel free to use and modify.
   <img src="https://res.cloudinary.com/dusmnbymp/image/upload/v1758912378/logo_af0asi.svg" width="80" alt="Prescripto Logo" />
 </p>
 
-**Mohit Singh**  
+### **Mohit Singh**  
 - Email: [mohitsingh.2626452@gmail.com](mailto:mohitsingh.2626452@gmail.com)  
 - GitHub: [OmpalSingh01](https://github.com/OmpalSingh01)  
 - Live Demo: [https://prescripto.vercel.app/](https://prescripto.vercel.app/)
