@@ -91,27 +91,27 @@ It allows patients to <b>book appointments</b>, doctors to <b>manage schedules</
   <table>
     <tr>
       <td align="center">
-         <img width="100%" alt="Home Page"  alt="Screenshot 2025-09-27 003859" src="https://github.com/user-attachments/assets/444bda20-137a-4175-8db0-8b24e4ba8a6b" />
-
+        <img src="https://github.com/user-attachments/assets/444bda20-137a-4175-8db0-8b24e4ba8a6b" width="400" alt="Home Page" />
         <br /><b>🏠 Home Page</b>
       </td>
       <td align="center">
-        <img width="100%" alt="Patient Dashboard" src="https://user-images.githubusercontent.com/your-images/patient-dashboard.png" />
-        <br /><b>👤 Patient Dashboard</b>
+        <img src="https://github.com/user-attachments/assets/ee97daf1-bd22-49a6-a1b0-b474485d464e" width="400" alt="Admin Dashboard" />
+        <br /><b>👤 Admin Dashboard</b>
       </td>
     </tr>
     <tr>
       <td align="center">
-        <img width="100%" alt="Doctor Dashboard" src="https://user-images.githubusercontent.com/your-images/doctor-dashboard.png" />
+        <img src="https://github.com/user-attachments/assets/2a9f2c77-d0b6-4345-a095-6ca86074ed65" width="400" alt="Doctor Dashboard" />
         <br /><b>🩺 Doctor Dashboard</b>
       </td>
       <td align="center">
-        <img width="100%" alt="Payment Page" src="https://user-images.githubusercontent.com/your-images/payment.png" />
+        <img src="https://github.com/user-attachments/assets/fe7fd1d1-f43c-412c-bda1-0d64f5a3502b" width="400" alt="Payment Integration" />
         <br /><b>💳 Payment Integration</b>
       </td>
     </tr>
   </table>
 </p>
+
 
 ---
 
