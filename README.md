@@ -5,7 +5,7 @@
 
 <p align="center">
   <h1>💊 Prescripto - Doctor Appointment Booking System</h1>
-  <a href="https://prescripto.vercel.app/">
+  <a href="">https://prescripto-f.vercel.app/
     <img src="https://img.shields.io/badge/Live%20Demo-Visit%20Now-brightgreen?style=for-the-badge&logo=vercel" />
   </a>
 </p>
@@ -208,5 +208,5 @@ This project is licensed under the MIT License – feel free to use and modify.
 ### **Mohit Singh**  
 - Email: [mohitsingh.2626452@gmail.com](mailto:mohitsingh.2626452@gmail.com)  
 - GitHub: [OmpalSingh01](https://github.com/OmpalSingh01)  
-- Live Demo: [https://prescripto.vercel.app/](https://prescripto.vercel.app/)
+- Live Demo: [https://prescripto-f.vercel.app/](https://prescripto-f.vercel.app/)
 
