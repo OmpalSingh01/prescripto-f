@@ -91,8 +91,7 @@ It allows patients to <b>book appointments</b>, doctors to <b>manage schedules</
   <table>
     <tr>
       <td align="center">
-        <img width="100%" alt="Home Page" src="<img width="1920" height="1150" alt="Screenshot 2025-09-27 003859" src="https://github.com/user-attachments/assets/444bda20-137a-4175-8db0-8b24e4ba8a6b" />
-" />
+         <img width="100%" alt="Home Page"  alt="Screenshot 2025-09-27 003859" src="https://github.com/user-attachments/assets/444bda20-137a-4175-8db0-8b24e4ba8a6b" />
 
         <br /><b>🏠 Home Page</b>
       </td>
